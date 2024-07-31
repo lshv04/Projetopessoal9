@@ -12,12 +12,14 @@ body {
 
 :root {
     --base-blue: #1a2456;
+    --base-white:#fff;
     --nav-link: #efc2b3;
     --nav-link2: #b7786e;
     --nav-link3: #adb1c3;
     --nav-link-fs: 0.75rem;
 }
 
+/* classes  */
 h1 {
     font-size: 2.34375rem;
     margin-bottom: 0.9375rem;
@@ -26,6 +28,50 @@ h1 {
     line-height: 1.2;
     text-transform: uppercase;
     color: var(--nav-link);
+}
+
+.cardtitle {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border:1px solid black;
+    font-size: 1rem;
+    color:var(--base-blue)
+    
+}
+.pricetag{
+    
+    text-transform: uppercase;
+    border:1px solid black;
+    font-size: 1rem;
+    color:var(--base-blue)
+}
+.divlink{
+    text-decoration: none;
+}
+
+.carddescription{
+    font-size: .9rem;
+    color:var(--base-blue);
+    border:1px solid black;
+    
+}
+
+.button1{
+   
+    border:1px solid transparent;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding:0 1rem;
+    border-radius: 50rem;
+    background-color: var(--base-blue);
+    color: var(--base-white);
+    display: inline-block;
+    font-size: .7rem;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: .375rem 1.0rem;
+    text-align: center;
+    
 }
 
 /* navbar */
@@ -78,7 +124,9 @@ h1 {
 }
 
 /* header */
-
+.headercapsule{
+    height: 42.1875rem;
+}
 header {
     position: absolute;
     top: 0;
@@ -146,6 +194,42 @@ header::after {
 .header2:hover i {
     font-size: 3rem;
 }
+
+/* section */
+
+section{
+    border:1px solid black;
+    
+}
+.sec1, .sec1ab, .sec1ab1, .sec1ab2{
+    border:1px solid black;
+   
+}
+.sec1a{
+    border:1px solid black;
+    height:450px;
+    padding:1rem;
+}
+.sec1ab{
+    
+    height:100% ;
+}
+
+.sec1ab1{
+    height: 80%;
+}
+.sec1ab2{
+    height: 20%;
+}
+.sec1ab3{
+    padding:0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+
 
 @media (max-width: 991px) {
 
