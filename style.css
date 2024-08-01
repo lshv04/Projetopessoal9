@@ -12,10 +12,12 @@ body {
 
 :root {
     --base-blue: #1a2456;
-    --base-white:#fff;
+    --base-white: #fff;
     --nav-link: #efc2b3;
     --nav-link2: #b7786e;
     --nav-link3: #adb1c3;
+    --stickerbg: #ff8d6b;
+    --stickercolor: #212529;
     --nav-link-fs: 0.75rem;
 }
 
@@ -28,50 +30,6 @@ h1 {
     line-height: 1.2;
     text-transform: uppercase;
     color: var(--nav-link);
-}
-
-.cardtitle {
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    border:1px solid black;
-    font-size: 1rem;
-    color:var(--base-blue)
-    
-}
-.pricetag{
-    
-    text-transform: uppercase;
-    border:1px solid black;
-    font-size: 1rem;
-    color:var(--base-blue)
-}
-.divlink{
-    text-decoration: none;
-}
-
-.carddescription{
-    font-size: .9rem;
-    color:var(--base-blue);
-    border:1px solid black;
-    
-}
-
-.button1{
-   
-    border:1px solid transparent;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding:0 1rem;
-    border-radius: 50rem;
-    background-color: var(--base-blue);
-    color: var(--base-white);
-    display: inline-block;
-    font-size: .7rem;
-    font-weight: 600;
-    line-height: 1.5;
-    padding: .375rem 1.0rem;
-    text-align: center;
-    
 }
 
 /* navbar */
@@ -124,9 +82,10 @@ h1 {
 }
 
 /* header */
-.headercapsule{
+.headercapsule {
     height: 42.1875rem;
 }
+
 header {
     position: absolute;
     top: 0;
@@ -197,39 +156,156 @@ header::after {
 
 /* section */
 
-section{
-    border:1px solid black;
-    
-}
-.sec1, .sec1ab, .sec1ab1, .sec1ab2{
-    border:1px solid black;
-   
-}
-.sec1a{
-    border:1px solid black;
-    height:450px;
-    padding:1rem;
-}
-.sec1ab{
-    
-    height:100% ;
+section {
+    border: 1px solid black;
+
 }
 
-.sec1ab1{
-    height: 80%;
+.sec1,
+.sec1ab,
+.sec1ab1,
+.sec1ab2 {
+    border: 1px solid black;
+
 }
-.sec1ab2{
+
+.sec1a {
+    border: 1px solid black;
+    height: 29.19rem;
+    padding: 1rem;
+}
+
+.sec1ab {
+
+    height: 100%;
+}
+
+.sec1ab2 {
     height: 20%;
 }
-.sec1ab3{
-    padding:0.5rem 0;
+
+.sec1ab3 {
+    padding: 0.5rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
+
 }
 
+/* card */
+.cardimage1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
 
+.cardimage2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.sec1ab1 {
+    height: 80%;
+    position: relative;
+}
+
+.sticker {
+    position: absolute;
+    border: 1px solid black;
+    top: 15px;
+    right: 0;
+    z-index: 2;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.25rem 1rem;
+    font-weight: 600;
+    font-size: var(--nav-link-fs);
+    background-color: var(--stickerbg);
+}
+
+.divlink {
+    text-decoration: none;
+}
+
+.transition2 {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    border: 1px solid black;
+    width: 6.88rem;
+}
+
+.button1 {
+    position: absolute;
+    top: -5px;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    border-radius: 50rem;
+    background-color: var(--base-blue);
+    color: var(--base-white);
+    display: inline-block;
+    font-size: var(--nav-link-fs);
+    font-weight: 600;
+    line-height: 1.5;
+    padding: .375rem 1.0rem;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.pricetag {
+    top: -5px;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--base-blue);
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.cardtitle {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    font-size: 1rem;
+    color: var(--base-blue);
+    margin: 0;
+}
+
+.carddescription {
+    font-size: .9rem;
+    color: var(--base-blue);
+    border: 1px solid black;
+    margin:0;
+}
+
+.sec1ab1:hover .cardimage2,
+.sec1ab1:hover .button1 {
+    opacity: 1 ;
+}
+
+.sec1ab:hover .pricetag {
+    opacity: 0;
+}
+
+.sec1ab:hover .button1 {
+    opacity: 1;
+}
 
 @media (max-width: 991px) {
 
@@ -238,7 +314,20 @@ section{
         justify-content: flex-start;
     }
 }
+@media (max-width: 768px) {
+        .sec1a{
+            margin-top: 1rem;
+            height: 26rem;
+        }
 
+}
+@media (max-width: 767px) {
+    .sec1a{
+        
+        padding:0;
+    }
+
+}
 @media (max-width: 431px) {
     header {
         height: 26.25rem;
@@ -256,6 +345,9 @@ section{
     .header1p {
         font-size: 1.1rem;
 
+    }
+    .headercapsule {
+        height: 26rem;
     }
 
 }
