@@ -11,6 +11,7 @@ body {
 }
 
 :root {
+    --base-dark: #080b1b;
     --base-blue: #1a2456;
     --base-white: #fff;
     --nav-link: #efc2b3;
@@ -156,21 +157,8 @@ header::after {
 
 /* section */
 
-section {
-    border: 1px solid black;
-
-}
-
-.sec1,
-.sec1ab,
-.sec1ab1,
-.sec1ab2 {
-    border: 1px solid black;
-
-}
-
 .sec1a {
-    border: 1px solid black;
+
     height: 29.19rem;
     padding: 1rem;
 }
@@ -181,7 +169,7 @@ section {
 }
 
 .sec1ab2 {
-    height: 20%;
+    height: 15%;
 }
 
 .sec1ab3 {
@@ -189,8 +177,6 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-
 }
 
 /* card */
@@ -218,13 +204,13 @@ section {
 }
 
 .sec1ab1 {
-    height: 80%;
+    height: 85%;
     position: relative;
 }
 
 .sticker {
     position: absolute;
-    border: 1px solid black;
+
     top: 15px;
     right: 0;
     z-index: 2;
@@ -244,7 +230,7 @@ section {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    border: 1px solid black;
+
     width: 6.88rem;
 }
 
@@ -281,7 +267,6 @@ section {
 .cardtitle {
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    border: 1px solid black;
     font-size: 1rem;
     color: var(--base-blue);
     margin: 0;
@@ -290,13 +275,12 @@ section {
 .carddescription {
     font-size: .9rem;
     color: var(--base-blue);
-    border: 1px solid black;
-    margin:0;
+    margin: 0;
 }
 
 .sec1ab1:hover .cardimage2,
 .sec1ab1:hover .button1 {
-    opacity: 1 ;
+    opacity: 1;
 }
 
 .sec1ab:hover .pricetag {
@@ -307,6 +291,11 @@ section {
     opacity: 1;
 }
 
+.divlink:hover .cardtitle,
+.divlink:hover .carddescription {
+    color: var(--base-dark);
+}
+
 @media (max-width: 991px) {
 
     .nav-item {
@@ -314,20 +303,24 @@ section {
         justify-content: flex-start;
     }
 }
-@media (max-width: 768px) {
-        .sec1a{
-            margin-top: 1rem;
-            height: 26rem;
-        }
 
-}
-@media (max-width: 767px) {
-    .sec1a{
-        
-        padding:0;
+@media (max-width: 768px) {
+    .sec1a {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        height: 26rem;
     }
 
 }
+
+@media (max-width: 767px) {
+    .sec1a {
+
+        padding: 0;
+    }
+
+}
+
 @media (max-width: 431px) {
     header {
         height: 26.25rem;
@@ -346,6 +339,7 @@ section {
         font-size: 1.1rem;
 
     }
+
     .headercapsule {
         height: 26rem;
     }
