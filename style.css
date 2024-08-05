@@ -363,7 +363,7 @@ header::after {
 }
 
 .bannerp {
-    font-size: 1.171875rem;
+    font-size: var(--nav-link-fs);
     color: var(--base-blue);
 }
 
@@ -434,7 +434,7 @@ input::placeholder {
 .btn{
     border: 1px solid transparent;
     text-transform: uppercase;
-    font-size: .75rem;
+    font-size: var(--nav-link-fs);
     padding: 0 1rem;
     line-height: 1.5;
     border-radius: 50rem;
@@ -476,7 +476,9 @@ input::placeholder {
     .nav-item {
         align-items: flex-start;
         justify-content: flex-start;
+        margin-bottom: 1rem;
     }
+   
 }
 
 @media (max-width: 768px) {
