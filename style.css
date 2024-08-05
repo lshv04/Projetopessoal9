@@ -173,11 +173,8 @@ header::after {
 
 /* section */
 
-
-
 /* card */
 .sec1a {
-
     height: 29.19rem;
     padding: 1rem;
 }
@@ -228,7 +225,6 @@ header::after {
 
 .sticker {
     position: absolute;
-
     top: 15px;
     right: 0;
     z-index: 2;
@@ -248,7 +244,6 @@ header::after {
     display: flex;
     justify-content: flex-end;
     position: relative;
-
     width: 6.88rem;
 }
 
@@ -323,36 +318,26 @@ header::after {
     display: flex;
     justify-content: center;
     position: relative;
-    /* A div pode ser posicionada conforme necessário */
     width: 100%;
-    /* Ajusta a largura da div conforme necessário */
     height: 0;
     padding-bottom: 40%;
-    /* Aspect Ratio 16:9 (altura/largura * 100) */
     overflow: hidden;
-    /* Garante que a imagem não saia da div */
 }
 
 .banner1 img {
     position: absolute;
-    /* Permite a imagem se ajustar à div */
     top: 0;
     left: 0;
     width: 100%;
-    /* A imagem ocupa toda a largura da div */
     height: 100%;
-    /* A imagem ocupa toda a altura da div */
     object-fit: cover;
-    /* Ajusta a imagem para cobrir a div mantendo a proporção */
 }
 
 .banner1a {
-
     position: absolute;
     z-index: 3;
     top: 60px;
     text-align: center;
-
 }
 
 .bannerh1 {
@@ -372,13 +357,6 @@ footer{
     background-color: var(--base-blue);
     padding: 3rem;
 }
-
-/* footer, .foot1, .foot2, .foot3, .foot4, .foot5, .icons{
-    border:1px solid white;
-    
-} */
-
-
 
 .foot3, .foot4, .foot5{
     
@@ -464,8 +442,6 @@ input::placeholder {
     border: none;
     background-color: var(--nav-link);
     font-size: 0.9rem;
-    
-
 }
 .icons a {
     color:var(--base-blue);
